@@ -1,12 +1,18 @@
+// src/components/Contact.tsx
+"use client"; // <--- PENTING: Tambahkan direktif ini di baris paling atas
+
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link'; // <--- UBAH DARI 'react-router-dom' ke 'next/link'
 import { Mail, MapPin, Phone, Clock } from 'lucide-react';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
 import { RiThreadsLine } from 'react-icons/ri';
 
 const Contact: React.FC = () => {
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Pastikan window ada sebelum mencoba mengaksesnya
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   }, []);
 
   const [formData, setFormData] = useState({
@@ -26,17 +32,20 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Create WhatsApp message
-    const message = encodeURIComponent(
-      `Nama: ${formData.name}\n` +
-      `Email: ${formData.email}\n` +
-      `Subjek: ${formData.subject}\n\n` +
-      `Pesan:\n${formData.message}`
-    );
-    
-    // Open WhatsApp with pre-filled message
-    window.open(`https://wa.me/6285198526632?text=${message}`, '_blank');
+
+    // Pastikan window ada sebelum mencoba mengaksesnya
+    if (typeof window !== 'undefined') {
+      // Create WhatsApp message
+      const message = encodeURIComponent(
+        `Nama: ${formData.name}\n` +
+        `Email: ${formData.email}\n` +
+        `Subjek: ${formData.subject}\n\n` +
+        `Pesan:\n${formData.message}`
+      );
+
+      // Open WhatsApp with pre-filled message
+      window.open(`https://wa.me/6285198526632?text=${message}`, '_blank');
+    }
   };
 
   return (
@@ -44,7 +53,8 @@ const Contact: React.FC = () => {
       {/* Breadcrumb */}
       <div className="mb-8">
         <div className="flex items-center gap-2 text-sm text-gray-600">
-          <Link to="/" className="hover:text-blue-500">Beranda</Link>
+          {/* UBAH LINK: href="/", bukan to="/" */}
+          <Link href="/" className="hover:text-blue-500">Beranda</Link>
           <span>/</span>
           <span className="text-gray-900">Hubungi Kami</span>
         </div>
@@ -56,7 +66,7 @@ const Contact: React.FC = () => {
         {/* Contact Information */}
         <div>
           <h2 className="text-2xl font-semibold mb-6">Informasi Kontak</h2>
-          
+
           <div className="space-y-6 mb-8">
             <div className="flex items-start gap-4">
               <MapPin className="w-6 h-6 text-blue-500 flex-shrink-0" />
@@ -95,26 +105,26 @@ const Contact: React.FC = () => {
           <div>
             <h3 className="font-medium mb-3">Ikuti Kami</h3>
             <div className="flex gap-4">
-              <a 
+              <a
                 href="https://www.facebook.com/people/Citra-DigitalHotel/61576269524386/"
                 target="_blank"
-                rel="noopener noreferrer" 
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-gray-600 transition-colors"
               >
                 <FaFacebook size={24} />
               </a>
-              <a 
+              <a
                 href="https://www.instagram.com/citradigitalhotel/"
                 target="_blank"
-                rel="noopener noreferrer" 
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-gray-600 transition-colors"
               >
                 <FaInstagram size={24} />
               </a>
-              <a 
+              <a
                 href="https://www.threads.net/@citradigitalhotel"
                 target="_blank"
-                rel="noopener noreferrer" 
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-gray-600 transition-colors"
               >
                 <RiThreadsLine size={24} />
@@ -126,7 +136,7 @@ const Contact: React.FC = () => {
         {/* Contact Form */}
         <div>
           <h2 className="text-2xl font-semibold mb-6">Kirim Pesan</h2>
-          
+
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
