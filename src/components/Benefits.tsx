@@ -4,7 +4,7 @@ import { FaCheck, FaWhatsapp } from 'react-icons/fa';
 const PriceCard: React.FC<{
   title: string;
   price: string;
-  originalPrice: string;
+  originalPrice?: string; // <--- PERUBAHAN DI SINI: originalPrice sekarang opsional
   features: string[];
   icon: string;
   isPopular?: boolean;
@@ -22,12 +22,15 @@ const PriceCard: React.FC<{
         <span className="text-2xl">{icon}</span>
         <h3 className="text-xl font-semibold">{title}</h3>
       </div>
-      
+
       <div className="mb-6">
-        <span className="text-gray-500 line-through text-sm">{originalPrice}</span>
+        {/* PERUBAHAN DI SINI: Hanya render originalPrice jika nilainya ada */}
+        {originalPrice && (
+          <span className="text-gray-500 line-through text-sm">{originalPrice}</span>
+        )}
         <div className="text-3xl font-bold">{price}</div>
       </div>
-      
+
       <ul className="space-y-3 mb-8">
         {features.map((feature, index) => (
           <li key={index} className="flex items-start gap-2">
@@ -36,8 +39,8 @@ const PriceCard: React.FC<{
           </li>
         ))}
       </ul>
-      
-      <a 
+
+      <a
         href={createWhatsAppLink(title)}
         target="_blank"
         rel="noopener noreferrer"
@@ -90,6 +93,7 @@ const Benefits: React.FC = () => {
     {
       title: "Custom",
       icon: "💎",
+      // originalPrice tidak ada di sini, ini sudah sesuai dengan definisi PriceCardProps yang baru
       price: "Dapatkan Harga Spesial",
       features: [
         "5+ halaman sesuai kebutuhan",
@@ -113,7 +117,7 @@ const Benefits: React.FC = () => {
     <div id="benefits" className="px-6 py-16">
       <p className="text-center text-gray-600 mb-4">Pilih Paket Landing Page</p>
       <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">Sesuai Kebutuhan Brand Anda</h2>
-      
+
       <div className="grid md:grid-cols-3 gap-8 mb-12">
         {packages.map((pkg, index) => (
           <PriceCard key={index} {...pkg} />

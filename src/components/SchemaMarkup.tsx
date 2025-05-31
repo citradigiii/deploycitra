@@ -3,7 +3,7 @@ import { Hotel, Organization, LocalBusiness, WebSite } from 'schema-dts';
 export const getHotelSchema = () => {
   const schema: Hotel = {
     "@type": "Hotel",
-    "@context": "https://schema.org",
+    // HAPUS INI: "@context": "https://schema.org",
     name: "Citra Digital Hotel",
     description: "Solusi website profesional untuk penginapan Anda dengan harga terjangkau. Dilengkapi AI Customer Service 24/7 dan fitur booking WhatsApp.",
     url: "https://citradigitalhotel.com",
@@ -61,7 +61,7 @@ export const getHotelSchema = () => {
 export const getOrganizationSchema = () => {
   const schema: Organization = {
     "@type": "Organization",
-    "@context": "https://schema.org",
+    // HAPUS INI: "@context": "https://schema.org",
     name: "Citra Digital Hotel",
     url: "https://citradigitalhotel.com",
     logo: "https://ik.imagekit.io/4hotelsolution/ChatGPT%20Image%20May%2022,%202025,%2005_35_44%20PM.webp?updatedAt=1747910289562",
@@ -85,7 +85,7 @@ export const getOrganizationSchema = () => {
 export const getLocalBusinessSchema = () => {
   const schema: LocalBusiness = {
     "@type": "LocalBusiness",
-    "@context": "https://schema.org",
+    // HAPUS INI: "@context": "https://schema.org",
     name: "Citra Digital Hotel",
     image: "https://ik.imagekit.io/4hotelsolution/ChatGPT%20Image%20May%2022,%202025,%2005_35_44%20PM.webp?updatedAt=1747910289562",
     description: "Jasa pembuatan website hotel dan AI customer service di Karanganyar",
@@ -113,7 +113,6 @@ export const getLocalBusinessSchema = () => {
 export const getWebsiteSchema = () => {
   const schema: WebSite = {
     "@type": "WebSite",
-    "@context": "https://schema.org",
     name: "Citra Digital Hotel",
     url: "https://citradigitalhotel.com",
     potentialAction: {
@@ -122,7 +121,8 @@ export const getWebsiteSchema = () => {
         "@type": "EntryPoint",
         urlTemplate: "https://citradigitalhotel.com/search?q={search_term_string}"
       },
-      "query-input": "required name=search_term_string"
+      // PERUBAHAN DI SINI: Ganti "query-input" menjadi "query"
+      query: "required name=search_term_string" // <--- PERUBAHAN INI
     }
   };
 
