@@ -9,11 +9,6 @@ import '@/app/globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-// export const metadata: Metadata = { // DEKLARASI METADATA INI AKAN DIABAIKAN KARENA 'use client' DI LAYOUT INI
-//   title: 'Website Hotel & AI Customer Service',
-//   description: 'Solusi website profesional untuk penginapan Anda dengan harga terjangkau. Dilengkapi AI Customer Service 24/7 dan fitur booking WhatsApp.',
-// }
-
 export default function RootLayout({
   children,
 }: {
@@ -22,9 +17,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+        {/* Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body className={inter.className}>
         {/* Bungkus seluruh konten utama dengan HelmetProvider */}
