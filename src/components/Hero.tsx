@@ -44,17 +44,17 @@ const Hero: React.FC = () => {
         untuk Hotel Anda
       </h1>
       <p className="text-center max-w-2xl mx-auto text-gray-700 mb-10">
-        <span className="font-bold underline">Layanan pembuatan website dan AI automatisasi CS khusus penginapan</span> <br />
+        <span className="font-bold underline">Layanan pembuatan web dan AI automatisasi CS khusus penginapan</span> <br />
         — harga termurah, mulai dari 499k, kualitas tetap profesional dan terpercaya.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-        <button 
+        <button
           onClick={scrollToBenefits}
           className="gradient-blue text-white rounded px-6 py-3"
         >
           Dapatkan, Harga Termurah!
         </button>
-        <a 
+        <a
           href="https://wa.me/6285198526632?text=Halo%2C%20saya%20tertarik%20membuat%20website%20untuk%20penginapan%20saya.%20Boleh%20dibantu%20info%20lebih%20lanjut%3F"
           target="_blank"
           rel="noopener noreferrer"

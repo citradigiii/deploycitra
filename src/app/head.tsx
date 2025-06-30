@@ -18,10 +18,10 @@ export default function Head() {
             {/* Meta Tags */}
             <meta
                 name="description"
-                content="Layanan pembuatan website dan AI automatisasi CS khusus penginapan — harga termurah mulai dari 499k, kualitas profesional dan terpercaya."
+                content="Jasa web hotel murah dan AI automatisasi CS khusus penginapan — harga termurah mulai dari 499k, kualitas profesional dan terpercaya."
             />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <meta name="keywords" content="hotel, pembuatan website hotel, AI CS, automatisasi, penginapan, layanan digital hotel" />
+            <meta name="keywords" content="hotel, jasa web hotel murah, AI CS, automatisasi, penginapan, layanan digital hotel" />
             <meta name="author" content="Citra Digital Hotel" />
         </>
     )
