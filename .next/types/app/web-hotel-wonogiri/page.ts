@@ -1,8 +1,8 @@
-// File: C:\Users\WorkPro\Downloads\project-bolt-github-zjyzr8pd\project\src\app\jasa-website-hotel\page.tsx
-import * as entry from '../../../../src/app/jasa-website-hotel/page.js'
+// File: C:\Users\WorkPro\Downloads\project-bolt-github-zjyzr8pd\project\src\app\web-hotel-wonogiri\page.tsx
+import * as entry from '../../../../src/app/web-hotel-wonogiri/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
-type TEntry = typeof import('../../../../src/app/jasa-website-hotel/page.js')
+type TEntry = typeof import('../../../../src/app/web-hotel-wonogiri/page.js')
 
 // Check that the entry is a valid entry
 checkFields<Diff<{

@@ -1,3 +1,6 @@
 {
-  "/jasa-website-hotel/page": "app/jasa-website-hotel/page.js"
+  "/not-found": "app/not-found.js",
+  "/web-hotel-sragen/page": "app/web-hotel-sragen/page.js",
+  "/page": "app/page.js",
+  "/web-hotel-wonogiri/page": "app/web-hotel-wonogiri/page.js"
 }

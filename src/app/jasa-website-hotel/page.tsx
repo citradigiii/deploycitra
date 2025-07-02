@@ -1,8 +1,8 @@
 import React from 'react';
-import HotelWebsiteServiceArticle from '@/components/HotelWebsiteService';
+import HotelWebsiteService from '@/components/HotelWebsiteService';
 
 const JasaWebsiteHotelPage = () => {
-    return <HotelWebsiteServiceArticle />;
+    return <HotelWebsiteService />;
 };
 
 export default JasaWebsiteHotelPage;
