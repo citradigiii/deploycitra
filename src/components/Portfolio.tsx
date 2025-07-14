@@ -47,6 +47,18 @@ const Portfolio: React.FC = () => {
       demoUrl: "https://vermillion-babka-7a53a9.netlify.app/"
     },
     {
+      imageSrc: "https://i.imghippo.com/files/Vax4326gE.png",
+      demoUrl: "https://moonlit-truffle-ba9d49.netlify.app/"
+    },
+    {
+      imageSrc: "https://i.imghippo.com/files/jtx1925DqY.png",
+      demoUrl: "https://subtle-hummingbird-f68a98.netlify.app/"
+    },
+    {
+      imageSrc: "https://i.imghippo.com/files/QXR3663VE.png",
+      demoUrl: "https://cute-cheesecake-bb83f1.netlify.app/"
+    },
+    {
       imageSrc: "https://ik.imagekit.io/4hotelsolution/Frame%207.webp?updatedAt=1747828233478",
       demoUrl: "https://lambent-axolotl-09cdca.netlify.app/"
     }
