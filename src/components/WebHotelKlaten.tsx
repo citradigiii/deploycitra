@@ -133,9 +133,14 @@ const KlatenHotelWebsite: React.FC = () => {
               <FaWhatsapp />
               Konsultasi Gratis
             </a>
-            <button className="border border-blue-500 text-blue-500 hover:bg-blue-50 px-8 py-3 rounded-full font-medium transition-colors duration-200">
+            <a
+              href="https://www.citradigitalhotel.com/#portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-blue-500 text-blue-500 hover:bg-blue-50 px-8 py-3 rounded-full font-medium transition-colors duration-200 flex items-center justify-center"
+            >
               Lihat Portfolio
-            </button>
+            </a>
           </div>
         </div>
 
