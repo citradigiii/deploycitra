@@ -1,6 +1,19 @@
 export default function Head() {
     return (
         <>
+            {/* Google Ads (gtag.js) */}
+            <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17291988819"></script>
+            <script
+                dangerouslySetInnerHTML={{
+                    __html: `
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'AW-17291988819');
+                    `,
+                }}
+            />
+
             {/* Favicon */}
             <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
