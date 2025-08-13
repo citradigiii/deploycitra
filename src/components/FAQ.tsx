@@ -9,20 +9,20 @@ const FAQItem: React.FC<{ question: string; answer: string; isOpen: boolean; onC
   onClick 
 }) => {
   return (
-    <div className="border-b border-gray-200 py-6">
+    <div className="border-b border-gray-200 dark:border-gray-700 py-6">
       <button 
         onClick={onClick}
         className="w-full flex justify-between items-start gap-4 text-left"
       >
-        <h3 className="text-xl font-semibold">{question}</h3>
-        <div className={`p-2 rounded-full bg-gray-100 transition-transform duration-200 ${isOpen ? 'rotate-45' : ''}`}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{question}</h3>
+        <div className={`p-2 rounded-full bg-gray-100 dark:bg-gray-700 transition-transform duration-200 ${isOpen ? 'rotate-45' : ''}`}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-gray-600 dark:text-gray-300">
             <path d="M12 5V19M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </div>
       </button>
       <div 
-        className={`mt-4 text-gray-600 transition-all duration-200 overflow-hidden ${
+        className={`mt-4 text-gray-600 dark:text-gray-300 transition-all duration-200 overflow-hidden ${
           isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
@@ -86,9 +86,9 @@ const FAQ: React.FC = () => {
   const visibleFaqs = showAll ? faqs : faqs.slice(0, 5);
 
   return (
-    <div id="faq" className="bg-gray-50 py-16">
+    <div id="faq" className="bg-gray-50 dark:bg-gray-800 py-16 transition-colors duration-300">
       <div className="max-w-3xl mx-auto px-6">
-        <h2 className="text-4xl font-bold mb-8 text-center">Pertanyaan Umum</h2>
+        <h2 className="text-4xl font-bold mb-8 text-center text-gray-900 dark:text-white">Pertanyaan Umum</h2>
         
         <div className="space-y-4">
           {visibleFaqs.map((faq, index) => (
@@ -106,7 +106,7 @@ const FAQ: React.FC = () => {
           <div className="text-center mt-8">
             <button
               onClick={() => setShowAll(true)}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-full transition-colors duration-200"
+              className="bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 text-white px-6 py-2 rounded-full transition-colors duration-200"
             >
               Lihat Pertanyaan Lainnya
             </button>

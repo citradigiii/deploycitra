@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <div className="px-6 py-16 relative">
+    <div className="px-6 py-16 relative bg-white dark:bg-gray-900 transition-colors duration-300">
       {showPopup && (
         <div className="absolute top-10 left-0 md:left-[130px] animate-bounce">
           <div className="bg-[#FF3366] text-white px-6 py-3 rounded-lg shadow-lg transform -rotate-12">
@@ -36,14 +36,14 @@ const Hero: React.FC = () => {
       <div className="flex flex-col items-center gap-2 mb-8">
         <div className="flex items-center gap-2 bg-gray-100 rounded-full px-4 py-1.5 text-sm">
           <Hotel className="h-4 w-4" />
-          <span>Lebih dari 64+ Hotel & Penginapan Pilih Citra Digital Hotel</span>
+          <span className="text-gray-700 dark:text-gray-300">Lebih dari 64+ Hotel & Penginapan Pilih Citra Digital Hotel</span>
         </div>
       </div>
       <h1 className="text-5xl md:text-6xl font-bold text-center leading-tight mb-6 bg-gradient-to-b from-[#0066FF] via-[#00AFFF] to-[#00D4FF] text-transparent bg-clip-text">
         Wujudkan Brand Digital<br />
         untuk Hotel Anda
       </h1>
-      <p className="text-center max-w-2xl mx-auto text-gray-700 mb-10">
+      <p className="text-center max-w-2xl mx-auto text-gray-700 dark:text-gray-300 mb-10">
         <span className="font-bold underline">Layanan pembuatan web dan AI automatisasi CS khusus penginapan</span> <br />
         — harga termurah, mulai dari 499k, kualitas tetap profesional dan terpercaya.
       </p>

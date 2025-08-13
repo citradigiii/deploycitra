@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="relative bg-white text-gray-600">
+    <footer className="relative bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300 transition-colors duration-300">
       {/* AI Chat Button */}
       <button
         onClick={() => setIsChatOpen(true)}
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
                 className="h-16 w-auto"
               />
             </div>
-            <p className="text-sm mb-6">
+            <p className="text-sm mb-6 text-gray-600 dark:text-gray-300">
               Solusi website profesional untuk penginapan Anda dengan harga terjangkau dan kualitas premium.
             </p>
             <div className="flex space-x-4">
@@ -89,7 +89,7 @@ const Footer: React.FC = () => {
                 href="https://www.facebook.com/people/Citra-DigitalHotel/61576269524386/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-gray-600 transition-colors"
+                className="text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
               >
                 <FaFacebook size={20} />
               </a>
@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
                 href="https://www.instagram.com/citradigitalhotel/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-gray-600 transition-colors"
+                className="text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
               >
                 <FaInstagram size={20} />
               </a>
@@ -105,7 +105,7 @@ const Footer: React.FC = () => {
                 href="https://www.threads.net/@citradigitalhotel"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-gray-600 transition-colors"
+                className="text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
               >
                 <RiThreadsLine size={20} />
               </a>
@@ -116,43 +116,43 @@ const Footer: React.FC = () => {
             <h3 className="text-gray-900 font-semibold mb-4">Layanan Kami</h3>
             <ul className="space-y-3">
               {/* Menggunakan button dengan onClick untuk scrollToSection */}
-              <li><button onClick={() => scrollToSection('benefits')} className="hover:text-gray-900 transition-colors">Website Hotel</button></li>
-              <li><button onClick={() => scrollToSection('ai-customer')} className="hover:text-gray-900 transition-colors">AI Customer Service</button></li>
-              <li><button onClick={() => scrollToSection('portfolio')} className="hover:text-gray-900 transition-colors">Portfolio</button></li>
+              <li><button onClick={() => scrollToSection('benefits')} className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Website Hotel</button></li>
+              <li><button onClick={() => scrollToSection('ai-customer')} className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">AI Customer Service</button></li>
+              <li><button onClick={() => scrollToSection('portfolio')} className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Portfolio</button></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-gray-900 font-semibold mb-4">Bantuan</h3>
+            <h3 className="text-gray-900 dark:text-white font-semibold mb-4">Bantuan</h3>
             <ul className="space-y-3">
-              <li><button onClick={() => scrollToSection('faq')} className="hover:text-gray-900 transition-colors">FAQ</button></li>
+              <li><button onClick={() => scrollToSection('faq')} className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">FAQ</button></li>
               {/* Menggunakan Link dari Next.js */}
-              <li><Link href="/privacy-policy" className="hover:text-gray-900 transition-colors">Kebijakan Privasi</Link></li>
-              <li><Link href="/terms-and-conditions" className="hover:text-gray-900 transition-colors">Syarat & Ketentuan</Link></li>
-              <li><Link href="/contact" className="hover:text-gray-900 transition-colors">Kontak Kami</Link></li>
+              <li><Link href="/privacy-policy" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Kebijakan Privasi</Link></li>
+              <li><Link href="/terms-and-conditions" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Syarat & Ketentuan</Link></li>
+              <li><Link href="/contact" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Kontak Kami</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-gray-900 font-semibold mb-4">Kontak</h3>
+            <h3 className="text-gray-900 dark:text-white font-semibold mb-4">Kontak</h3>
             <ul className="space-y-3">
               <li className="flex items-center gap-2">
-                <MapPin size={16} className="text-gray-400" />
-                <span>Karanganyar, Jawa Tengah, Indonesia</span>
+                <MapPin size={16} className="text-gray-400 dark:text-gray-500" />
+                <span className="text-gray-600 dark:text-gray-300">Karanganyar, Jawa Tengah, Indonesia</span>
               </li>
               <li className="flex items-center gap-2">
-                <Phone size={16} className="text-gray-400" />
-                <span>+62 851 9852 6632</span>
+                <Phone size={16} className="text-gray-400 dark:text-gray-500" />
+                <span className="text-gray-600 dark:text-gray-300">+62 851 9852 6632</span>
               </li>
               <li className="flex items-center gap-2">
-                <Mail size={16} className="text-gray-400" />
-                <span>admin@citradigitalhotel.com</span>
+                <Mail size={16} className="text-gray-400 dark:text-gray-500" />
+                <span className="text-gray-600 dark:text-gray-300">admin@citradigitalhotel.com</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-100 mt-12 pt-8 text-sm text-center text-gray-500">
+        <div className="border-t border-gray-100 dark:border-gray-800 mt-12 pt-8 text-sm text-center text-gray-500 dark:text-gray-400">
           <p>&copy; {new Date().getFullYear()} Citra Digital Hotel. All rights reserved.</p>
         </div>
       </div>

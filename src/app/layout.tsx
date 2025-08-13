@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { HelmetProvider } from 'react-helmet-async';
+import { ThemeProvider } from '@/context/ThemeContext';
 import '@/app/globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -41,11 +42,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={inter.className}>
         <HelmetProvider>
-          <div className="min-h-screen flex flex-col bg-white">
-            <Navbar />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
+          <ThemeProvider>
+            <div className="min-h-screen flex flex-col bg-white dark:bg-gray-900 transition-colors duration-300">
+              <Navbar />
+              <main className="flex-1">{children}</main>
+              <Footer />
+            </div>
+          </ThemeProvider>
         </HelmetProvider>
       </body>
     </html>

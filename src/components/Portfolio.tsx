@@ -65,8 +65,8 @@ const Portfolio: React.FC = () => {
   ];
 
   return (
-    <div id="portfolio" className="px-6 mb-16">
-      <h2 className="text-4xl font-bold text-center mb-12">
+    <div id="portfolio" className="px-6 mb-16 bg-white dark:bg-gray-900 transition-colors duration-300">
+      <h2 className="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
         Temukan Desain Terbaik Kami: Pilih Demo dibawah ini untuk Menginspirasi Anda
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

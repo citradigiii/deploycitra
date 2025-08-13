@@ -44,14 +44,14 @@ const AICustomer: React.FC = () => {
   ];
 
   return (
-    <div id="ai-customer" className="py-16 bg-gradient-to-b from-white to-blue-50">
+    <div id="ai-customer" className="py-16 bg-gradient-to-b from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
             Harga Paling Murah! AI Customer Service untuk Hotel Anda
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Tingkatkan pelayanan hotel Anda dengan asisten AI yang siap melayani tamu 24/7
           </p>
         </div>
@@ -59,7 +59,7 @@ const AICustomer: React.FC = () => {
         {/* Main Feature Display */}
         <div className="grid lg:grid-cols-2 gap-12 mb-20">
           <div className="relative">
-            <div className="bg-white rounded-2xl shadow-2xl p-8 relative z-10">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 relative z-10 transition-colors duration-300">
               <div className="flex items-center gap-4 mb-6">
                 <div className="relative">
                   <img
@@ -69,17 +69,17 @@ const AICustomer: React.FC = () => {
                   />
                   <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full border-2 border-white"></div>
                 </div>
-                <h3 className="text-2xl font-bold">Ratna CS</h3>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Ratna CS</h3>
               </div>
               <div className="space-y-4 mb-6">
-                <div className="bg-blue-50 rounded-lg p-4">
-                  <p className="text-gray-700">👋 Selamat datang! Ada yang bisa saya bantu?</p>
+                <div className="bg-blue-50 dark:bg-blue-900/30 rounded-lg p-4">
+                  <p className="text-gray-700 dark:text-gray-300">👋 Selamat datang! Ada yang bisa saya bantu?</p>
                 </div>
-                <div className="bg-gray-100 rounded-lg p-4 ml-8">
-                  <p className="text-gray-700">Saya ingin tahu tentang ketersediaan kamar untuk tanggal 25 Juni</p>
+                <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 ml-8">
+                  <p className="text-gray-700 dark:text-gray-300">Saya ingin tahu tentang ketersediaan kamar untuk tanggal 25 Juni</p>
                 </div>
-                <div className="bg-blue-50 rounded-lg p-4">
-                  <p className="text-gray-700">Untuk tanggal 25 Juni, kami memiliki beberapa tipe kamar yang tersedia:
+                <div className="bg-blue-50 dark:bg-blue-900/30 rounded-lg p-4">
+                  <p className="text-gray-700 dark:text-gray-300">Untuk tanggal 25 Juni, kami memiliki beberapa tipe kamar yang tersedia:
                     - Deluxe Room (2 kamar)
                     - Suite Room (1 kamar)
                     Apakah Anda ingin informasi lebih detail?</p>
@@ -90,19 +90,19 @@ const AICustomer: React.FC = () => {
           </div>
           
           <div className="flex flex-col justify-center">
-            <h3 className="text-3xl font-bold mb-6">Transformasi Digital untuk Layanan Hotel</h3>
-            <p className="text-gray-600 mb-8">
+            <h3 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Transformasi Digital untuk Layanan Hotel</h3>
+            <p className="text-gray-600 dark:text-gray-300 mb-8">
               Dengan AI Customer Service, hotel Anda dapat memberikan:
             </p>
             <ul className="space-y-4">
               {benefits.map((benefit, index) => (
                 <li key={index} className="flex items-start gap-4">
-                  <div className="bg-blue-50 p-3 rounded-xl">
+                  <div className="bg-blue-50 dark:bg-blue-900/30 p-3 rounded-xl">
                     {benefit.icon}
                   </div>
                   <div>
-                    <h4 className="text-xl font-semibold mb-1">{benefit.title}</h4>
-                    <p className="text-gray-600">{benefit.description}</p>
+                    <h4 className="text-xl font-semibold mb-1 text-gray-900 dark:text-white">{benefit.title}</h4>
+                    <p className="text-gray-600 dark:text-gray-300">{benefit.description}</p>
                   </div>
                 </li>
               ))}
@@ -113,10 +113,10 @@ const AICustomer: React.FC = () => {
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-all duration-300">
               <div className="mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{feature.title}</h3>
+              <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>
             </div>
           ))}
         </div>

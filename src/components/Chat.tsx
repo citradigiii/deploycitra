@@ -131,7 +131,7 @@ const Chat: React.FC<ChatProps> = ({ isOpen, onClose }) => {
   return (
     <div
       ref={chatRef}
-      className="fixed bottom-24 right-8 w-[90vw] sm:w-[380px] bg-white rounded-2xl shadow-2xl flex flex-col z-50"
+      className="fixed bottom-24 right-8 w-[90vw] sm:w-[380px] bg-white dark:bg-gray-800 rounded-2xl shadow-2xl flex flex-col z-50 transition-colors duration-300"
       style={{ maxHeight: 'calc(100vh - 120px)', minHeight: '400px' }}
     >
       <div className="p-4 border-b flex items-center justify-between bg-gradient-to-r from-blue-600 to-blue-400 rounded-t-2xl">
@@ -154,12 +154,12 @@ const Chat: React.FC<ChatProps> = ({ isOpen, onClose }) => {
         </button>
       </div>
 
-      <div className="bg-green-50 p-3 border-b flex items-center justify-between">
+      <div className="bg-green-50 dark:bg-green-900/30 p-3 border-b dark:border-gray-700 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <FaWhatsapp className="text-green-500 text-xl" />
           <div>
-            <p className="text-sm font-medium text-gray-800">Citra Digital Hotel Order</p>
-            <p className="text-xs text-gray-500">Pesan via WhatsApp</p>
+            <p className="text-sm font-medium text-gray-800 dark:text-gray-200">Citra Digital Hotel Order</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">Pesan via WhatsApp</p>
           </div>
         </div>
         <a
@@ -172,14 +172,14 @@ const Chat: React.FC<ChatProps> = ({ isOpen, onClose }) => {
         </a>
       </div>
 
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+      <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-white dark:bg-gray-800">
         {messages.map(message => (
           <div key={message.id} className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
             <div className={`max-w-[80%] rounded-2xl p-3 ${message.sender === 'user'
                 ? 'bg-blue-500 text-white'
                 : message.sender === 'loading'
-                  ? 'bg-gray-200 text-gray-600 italic animate-pulse'
-                  : 'bg-gray-100 text-gray-800'
+                  ? 'bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 italic animate-pulse'
+                  : 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200'
               }`}>
               <p className="text-sm">{message.text}</p>
               <p className="text-xs mt-1 opacity-70">
@@ -191,7 +191,7 @@ const Chat: React.FC<ChatProps> = ({ isOpen, onClose }) => {
         <div ref={messagesEndRef} />
       </div>
 
-      <div className="p-4 border-t">
+      <div className="p-4 border-t dark:border-gray-700 bg-white dark:bg-gray-800">
         <div className="flex items-center gap-2">
           <input
             type="text"
@@ -199,7 +199,7 @@ const Chat: React.FC<ChatProps> = ({ isOpen, onClose }) => {
             onChange={(e) => setInputMessage(e.target.value)}
             onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
             placeholder="Ketik pesan Anda..."
-            className="flex-1 px-4 py-2 rounded-full border border-gray-200 focus:outline-none focus:border-blue-400"
+            className="flex-1 px-4 py-2 rounded-full border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors duration-200"
             disabled={isLoading}
           />
           <button
